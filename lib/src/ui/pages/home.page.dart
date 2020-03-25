@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge_ui/src/ui/pages/list.page.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -10,14 +11,17 @@ class HomePage extends StatelessWidget {
           constraints: BoxConstraints.expand(),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[_buildBody(), _buildFlatButtonBottom()],
+            children: <Widget>[
+              _buildBody(),
+              _buildFlatButtonBottom(context),
+            ],
           ),
         ),
       ),
     );
   }
 
-  FlatButton _buildFlatButtonBottom() {
+  FlatButton _buildFlatButtonBottom(BuildContext context) {
     return FlatButton(
       color: Colors.transparent,
       child: Text(
@@ -25,7 +29,8 @@ class HomePage extends StatelessWidget {
         style: TextStyle(fontSize: 20.0, color: Colors.white),
       ),
       onPressed: () {
-        print('clicked');
+        Navigator.push(
+            context, MaterialPageRoute(builder: (context) => ListPage()));
       },
     );
   }
@@ -35,7 +40,7 @@ class HomePage extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(16.0),
         decoration: BoxDecoration(
-          color: Colors.purple,
+          color: Colors.purple.shade600,
           borderRadius: BorderRadius.vertical(
             bottom: Radius.circular(
               32.0,
