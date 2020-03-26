@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge_ui/src/ui/pages/detail.page.dart';
 import 'package:flutter_challenge_ui/src/ui/utils/custom_clippath.util.dart';
 
 final List<Color> _listColor = [
@@ -12,6 +13,11 @@ final List<Color> _listColor = [
 ];
 
 class ListPage extends StatelessWidget {
+  final String image;
+  final Color color;
+
+  ListPage({this.color, this.image});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -70,7 +76,17 @@ class ListPage extends StatelessWidget {
           Expanded(
             child: ListView.builder(
               itemBuilder: (context, index) {
-                return TreeCard(index: index);
+                return Material(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => DetailPage()));
+                    },
+                    child: TreeCard(index: index),
+                  ),
+                );
               },
               itemCount: 15,
             ),
