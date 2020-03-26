@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_challenge_ui/src/ui/challenge_2/pages/detail.ch2.page.dart';
 import 'package:flutter_challenge_ui/src/ui/challenge_2/utils/background.clippath.util.dart';
 import 'package:flutter_challenge_ui/src/ui/challenge_2/utils/cube.painter.util.dart';
 
@@ -104,7 +105,12 @@ class HomeCh2Page extends StatelessWidget {
                           ],
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailCh2Page()));
+                      },
                     )
                   ],
                 ),
