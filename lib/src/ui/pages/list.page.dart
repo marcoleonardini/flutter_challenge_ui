@@ -82,9 +82,14 @@ class ListPage extends StatelessWidget {
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => DetailPage()));
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetailPage(
+                            color: _listColor[index],
+                            image: 'images/tree_${index % 6}.png',
+                          ),
+                        ),
+                      );
                     },
                     child: TreeCard(index: index),
                   ),

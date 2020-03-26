@@ -1,6 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DetailPage extends StatelessWidget {
+  final Color color;
+  final String image;
+
+  DetailPage({this.color, this.image});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -43,7 +49,7 @@ class DetailPage extends StatelessWidget {
                     borderRadius: BorderRadius.horizontal(
                       right: Radius.circular(24.0),
                     ),
-                    color: Colors.purple.withOpacity(0.35),
+                    color: color.withOpacity(0.35),
                   ),
                   child: Column(
                     children: <Widget>[
@@ -66,17 +72,41 @@ class DetailPage extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                          flex: 2,
-                          child: Padding(
-                            padding: const EdgeInsets.all(20.0),
-                            child: Placeholder(),
-                          )),
+                        flex: 2,
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: <Widget>[
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: <Widget>[
+                                  InfoText(
+                                    title: 'TYPE',
+                                    value: 'Malvaceae',
+                                  ),
+                                  InfoText(
+                                    title: 'HEIGHT',
+                                    value: '18-25 m',
+                                  )
+                                ],
+                              ),
+                              InfoText(
+                                title: 'GROW',
+                                value: 'Africa & Australia',
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
                       Expanded(
                         flex: 3,
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Image.asset(
-                            'images/tree_3.png',
+                            image,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -86,7 +116,7 @@ class DetailPage extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 2,
                 child: Container(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -108,7 +138,7 @@ class DetailPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Icon(
-                            Icons.branding_watermark,
+                            Icons.opacity,
                             color: Colors.orange,
                           ),
                           Text('no need'),
@@ -118,7 +148,7 @@ class DetailPage extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           Icon(
-                            Icons.hot_tub,
+                            Icons.access_time,
                             color: Colors.orange,
                           ),
                           Text('18 - 35`'),
@@ -160,13 +190,37 @@ class DetailPage extends StatelessWidget {
                   ],
                 ),
                 Text(
-                  'ad asd asdlkasnc iwefh iwuffowiau biaow bwia fiwauf iawrb iawrb iwariwa ',
+                  'The Baobab tree is a strange looking tree that grows in low-lying areas in Africa ans Australia',
                   textAlign: TextAlign.justify,
                   style: TextStyle(color: Colors.black54),
                 )
               ],
             ),
           ),
+        ),
+      ],
+    );
+  }
+}
+
+class InfoText extends StatelessWidget {
+  final String title;
+  final String value;
+
+  InfoText({this.title, this.value});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          title,
+          style: TextStyle(color: Colors.white60),
+        ),
+        Text(
+          value,
+          style: TextStyle(color: Colors.white, fontSize: 15.0),
         ),
       ],
     );
