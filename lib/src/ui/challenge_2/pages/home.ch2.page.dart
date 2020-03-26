@@ -62,7 +62,7 @@ class HomeCh2Page extends StatelessWidget {
                     Text(
                       'Ready made\nrooms to go',
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(0xffbb967c),
                         fontWeight: FontWeight.w600,
                         fontSize: 32.0,
                         height: 1.5,
@@ -83,12 +83,12 @@ class HomeCh2Page extends StatelessWidget {
                     FlatButton(
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
-                          color: Colors.orange,
+                          color: Color(0xffbb967c),
                           width: 2.0,
                         ),
                         borderRadius: BorderRadius.circular(8.0),
                       ),
-                      textColor: Colors.orange,
+                      textColor: Color(0xffbb967c),
                       child: Container(
                         padding: EdgeInsets.all(16.0),
                         child: Row(
