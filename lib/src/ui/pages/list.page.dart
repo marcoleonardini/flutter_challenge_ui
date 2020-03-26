@@ -57,6 +57,7 @@ class ListPage extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
+            color: Colors.white,
             padding: EdgeInsets.symmetric(horizontal: 24.0),
             child: Row(
               children: <Widget>[
@@ -77,6 +78,7 @@ class ListPage extends StatelessWidget {
             child: ListView.builder(
               itemBuilder: (context, index) {
                 return Material(
+                  color: Colors.white,
                   child: InkWell(
                     onTap: () {
                       Navigator.push(
