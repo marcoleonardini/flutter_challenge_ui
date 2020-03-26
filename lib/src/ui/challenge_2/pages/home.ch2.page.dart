@@ -52,6 +52,63 @@ class HomeCh2Page extends StatelessWidget {
                   ),
                 ),
               ),
+              Padding(
+                padding: const EdgeInsets.all(32.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.40),
+                    Text(
+                      'Ready made\nrooms to go',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 32.0,
+                        height: 1.5,
+                      ),
+                    ),
+                    Text(
+                      'Virtual digital showrooms transform your dreams into reality at once touch of screen.',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.grey,
+                        height: 2,
+                        letterSpacing: 1,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 12.0,
+                    ),
+                    FlatButton(
+                      shape: RoundedRectangleBorder(
+                        side: BorderSide(
+                          color: Colors.orange,
+                          width: 2.0,
+                        ),
+                        borderRadius: BorderRadius.circular(8.0),
+                      ),
+                      textColor: Colors.orange,
+                      child: Container(
+                        padding: EdgeInsets.all(16.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: <Widget>[
+                            Text(
+                              'Get Started',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                              ),
+                            ),
+                            Icon(Icons.keyboard_arrow_right)
+                          ],
+                        ),
+                      ),
+                      onPressed: () {},
+                    )
+                  ],
+                ),
+              )
             ],
           ),
         ),
