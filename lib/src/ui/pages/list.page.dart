@@ -85,8 +85,8 @@ class ListPage extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                           builder: (context) => DetailPage(
-                            color: _listColor[index],
-                            image: 'images/tree_${index % 6}.png',
+                            color: _listColor[index % 7],
+                            image: 'images/tree_${index % 5}.png',
                           ),
                         ),
                       );
