@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_ui/src/ui/pages/detail.page.dart';
-import 'package:flutter_challenge_ui/src/ui/utils/custom_clippath.util.dart';
+import 'package:flutter_challenge_ui/src/ui/challenge_1/pages/detail.ch1.page.dart';
+import 'package:flutter_challenge_ui/src/ui/challenge_1/utils/custom_clippath.util.dart';
 
 final List<Color> _listColor = [
   Colors.cyan,
@@ -12,11 +12,11 @@ final List<Color> _listColor = [
   Colors.pink,
 ];
 
-class ListPage extends StatelessWidget {
+class ListCh1Page extends StatelessWidget {
   final String image;
   final Color color;
 
-  ListPage({this.color, this.image});
+  ListCh1Page({this.color, this.image});
 
   @override
   Widget build(BuildContext context) {
@@ -84,7 +84,7 @@ class ListPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => DetailPage(
+                          builder: (context) => DetailCh1Page(
                             color: _listColor[index % 7],
                             image: 'images/tree_${index % 5}.png',
                           ),

@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailCh1Page extends StatelessWidget {
   final Color color;
   final String image;
 
-  DetailPage({this.color, this.image});
+  DetailCh1Page({this.color, this.image});
 
   @override
   Widget build(BuildContext context) {

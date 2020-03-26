@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_ui/src/ui/pages/home.page.dart';
+import 'package:flutter_challenge_ui/menu.dart';
 
 void main() => runApp(MyApp());
 
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Challenge UI',
-      home: HomePage(),
+      home: MenuApp(),
     );
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_challenge_ui/src/ui/pages/list.page.dart';
+import 'package:flutter_challenge_ui/src/ui/challenge_1/pages/list.ch1.page.dart';
 
-class HomePage extends StatelessWidget {
+class HomeCh1Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,7 +30,7 @@ class HomePage extends StatelessWidget {
       ),
       onPressed: () {
         Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ListPage()));
+            context, MaterialPageRoute(builder: (context) => ListCh1Page()));
       },
     );
   }
