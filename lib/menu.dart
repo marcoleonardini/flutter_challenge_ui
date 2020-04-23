@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_challenge_ui/src/ui/challenge_1/pages/home.ch1.page.dart';
 import 'package:flutter_challenge_ui/src/ui/challenge_2/pages/home.ch2.page.dart';
+import 'package:flutter_challenge_ui/src/ui/challenge_3/home.ch3.page.dart';
 
 class MenuApp extends StatelessWidget {
   @override
@@ -21,6 +22,13 @@ class MenuApp extends StatelessWidget {
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => HomeCh2Page()));
+              },
+            ),
+            RaisedButton(
+              child: Text('Challenge UI 3'),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomeCh3Page()));
               },
             )
           ],
